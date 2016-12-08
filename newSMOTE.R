@@ -134,7 +134,7 @@ mySMOTE.exs <- function(data, N, k, tau2 = 0.001)
 			next
 		}
 		
-		noise <- rep(0, p - 1)
+		noise <- rep(rnorm(5,0,0,5), p - 1)
 		
 		neig <- cand[sample(1:length(cand), 1)] # Choose one of the cands
 		difs <- A[neig, -6] - B[i, -6] # Compute difference 
